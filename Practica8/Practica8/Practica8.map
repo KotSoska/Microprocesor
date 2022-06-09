@@ -1,0 +1,99 @@
+HI-TECH Software 8051-C Compiler V9.60
+
+Linker command line:
+
+--edf=C:\PROGRA~2\HI-TECH Software\HC51\lite\9.60\dat\en_msgs.txt \
+  -h+Z:\Practica8.sym -z -Q8051AH -ol.obj -MZ:\Practica8.map -E1 \
+  -ver=8051-C#V9.60 -ACODE=00h-0FFFh -pvectors=00h \
+  -prbit=0/20h,rbss,rdata/CODE,irdata/CODE,idata/rbss -pbss=XDATA/idata \
+  -pdata=CODE+100h -pconst=CODE+100h -pstrings=CODE+100h -pnvram=bss,heap \
+  C:\Users\ALEXAN~1\AppData\Local\Temp\s394.obj Z:\main_0.obj \
+  C:\PROGRA~2\HI-TECH Software\HC51\lite\9.60\lib\51--nsc.lib 
+
+Object code version is 3.8
+
+Machine type is 8051AH
+
+Call graph:
+
+*start1 size 0,0 offset 0
+*    _main size 0,6 offset 0
+
+		Name          Link     Load   Length Selector Space Scale
+C:\Users\ALEXAN~1\AppData\Local\Temp\s394.obj
+		vectors          0        0        3       0     0
+		text            BB       BB       14       0     0
+Z:\main_0.obj   data           100      100        C     100     0
+		text             3        3       70       0     0
+
+C:\PROGRA~2\HI-TECH Software\HC51\lite\9.60\lib\51--nsc.lib
+float.obj       text           10C      10C      393     100     0
+ldc_long.obj    text            73       73       48       0     0
+powerup.obj     text            CF       CF        3       0     0
+
+COMMON          rbss            20       20        6      20     1
+
+TOTAL		Name          Link     Load   Length
+	CLASS	CODE     
+		vectors          0        0        3
+		data           100      100        C
+		text            BB       BB       14
+		text             3        3       70
+		text           10C      10C      393
+		text            73       73       48
+		text            CF       CF        3
+
+	CLASS	DATA     
+		rbss            20       20        6
+
+	CLASS	XDATA    
+
+	CLASS	BITSEG   
+
+
+
+SEGMENTS	Name		Load	Length	 Top	Selector    Space Class
+
+		vectors         000000	0000D2	0000D2	       0       0  CODE    
+		rbit            000020	000006	000026	      20       1  BITSEG  
+		data            000100	00039F	00049F	     100       0  CODE    
+
+
+UNUSED ADDRESS RANGES
+
+	CODE             0D2-0FF
+	                 49F-FFF
+
+                                  Symbol Table
+
+?a_main        rbss    020  __Bbss         bss     026
+__Bidata       idata   026  __Birdata      irdata  003
+__Brbit        rbit    020  __Brdata       rdata   003
+__Hbss         bss     026  __Hcode        code    026
+__Hconst       const   100  __Hdata        data    10C
+__Hheap        heap    026  __Hidata       idata   026
+__Hirdata      irdata  026  __Hnvram       nvram   026
+__Hrbit        rbit    000  __Hrbss        rbss    026
+__Hrdata       rdata   026  __Hstrings     strings 100
+__Htext        text    026  __Hvectors     vectors 003
+__Lbss         bss     026  __Lcode        code    026
+__Lconst       const   100  __Ldata        data    100
+__Lheap        heap    026  __Lidata       idata   026
+__Lirdata      irdata  026  __Lnvram       nvram   026
+__Lrbit        rbit    000  __Lrbss        rbss    020
+__Lrdata       rdata   026  __Lstrings     strings 100
+__Ltext        text    026  __Lvectors     vectors 000
+__S0           (abs)   49F  _exit          text    0CC
+_main          text    003  abtof          text    454
+altof          (abs)   000  awtof          text    45B
+divl           text    366  fladd          (abs)   000
+flcmp          text    260  fldiv          text    346
+flmul          text    28E  flsub          text    1EF
+ftol           text    3EE  intlevel0      (abs)   000
+intlevel1      (abs)   000  lbtof          text    48E
+ldb_long       text    077  ldb_ltemp      text    099
+ldc_long       text    073  ldc_ltemp      text    095
+lltof          text    493  lwtof          text    490
+powerup        text    0CF  small_model    (abs)   001
+stack_internal (abs)   001  start          vectors 000
+start1         text    0BB  
